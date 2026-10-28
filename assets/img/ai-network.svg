@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" role="img" aria-labelledby="title desc">
+  <title id="title">Dirbtinio intelekto tinklas</title>
+  <desc id="desc">Abstrakti neuroninio tinklo ir susietų duomenų taškų iliustracija.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d3947"/>
+      <stop offset="1" stop-color="#111d24"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#55c7f0"/>
+      <stop offset="1" stop-color="#1387c1"/>
+    </linearGradient>
+    <filter id="soft-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="28" y="28" width="584" height="504" rx="42" fill="url(#panel)" stroke="#2d5263" stroke-width="2"/>
+  <circle cx="320" cy="278" r="172" fill="#1387c1" opacity=".07"/>
+  <g fill="none" stroke="#55c7f0" stroke-opacity=".55" stroke-width="3">
+    <path d="M136 154 234 205 320 138 408 204 510 151"/>
+    <path d="M136 154 164 278 234 205 256 342 320 278 320 138"/>
+    <path d="M510 151 476 278 408 204 386 342 320 278 320 138"/>
+    <path d="M164 278 256 342 320 414 386 342 476 278"/>
+    <path d="M234 205 320 278 408 204"/>
+    <path d="M256 342 320 278 386 342"/>
+  </g>
+  <g fill="#14252e" stroke="url(#glow)" stroke-width="5" filter="url(#soft-glow)">
+    <circle cx="136" cy="154" r="12"/><circle cx="234" cy="205" r="14"/>
+    <circle cx="320" cy="138" r="13"/><circle cx="408" cy="204" r="14"/>
+    <circle cx="510" cy="151" r="12"/><circle cx="164" cy="278" r="13"/>
+    <circle cx="320" cy="278" r="20"/><circle cx="476" cy="278" r="13"/>
+    <circle cx="256" cy="342" r="14"/><circle cx="386" cy="342" r="14"/>
+    <circle cx="320" cy="414" r="12"/>
+  </g>
+  <g fill="#dff7ff" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="320" y="486" font-size="18" letter-spacing="5">AI  ·  DUOMENYS  ·  IDĖJOS</text>
+  </g>
+</svg>
