@@ -1,6 +1,6 @@
 # Faustas Rinkevičius – CV svetainė
 
-Svetainė paruošta pagal 7-o laboratorinio darbo turinio reikalavimus. Pagrindinis puslapis yra `index.html`.
+Svetainė tęsiama pagal 7–8 laboratorinių darbų reikalavimus. Pagrindinis puslapis yra `index.html`.
 
 ## Peržiūra kompiuteryje
 
@@ -9,11 +9,15 @@ Svetainė paruošta pagal 7-o laboratorinio darbo turinio reikalavimus. Pagrindi
 3. Atidaryk `index.html`, spustelėk jį dešiniuoju pelės mygtuku ir pasirink **Open with Live Server**.
 4. Jei reikia, įdiek ir **Prettier – Code formatter** papildinį.
 
-## Paskelbimas per GitHub Pages
+## LD8 turinys
 
-1. Sukurk viešą saugyklą pavadinimu `[tavo-github-vardas].github.io`.
-2. Įkelk visus šio aplanko failus ir aplankus taip, kad `index.html` būtų saugyklos šaknyje.
-3. GitHub saugyklos **Settings → Pages** skiltyje pasirink publikavimą iš `main` šakos ir `/ (root)` aplanko.
-4. Svetainė bus pasiekiama adresu `https://[tavo-github-vardas].github.io/`.
+- „Patirtis“ puslapyje pateiktos studijos, akademiniai darbai ir aiškiai nurodyta, kad profesinės patirties dar nėra.
+- „Atlikti darbai“ puslapyje yra trys MATLAB grafikai su pavadinimais, aprašymais ir alternatyviais tekstais.
+- „Paslaugos“ puslapyje pateikta 4 × 3 lentelė, technologijų sąrašas su įdėtiniu sąrašu, numeruoti analizės etapai ir HTML vaizdo, YouTube bei garso įrašai.
+- Pexels vaizdo ir Pixabay garso failai saugomi `assets/media` aplanke.
 
-Šiame CV nėra viešai skelbiamų telefono ar el. pašto duomenų.
+Lentelėje nurodytos paslaugos ir kainos yra mokomieji pavyzdžiai, o ne realus kainoraštis.
+
+## GitHub Pages
+
+Pakeitimai skirti esamai viešai saugyklai `FaustasRi.github.io`; svetainė skelbiama iš `main` šakos šakninio aplanko.
