@@ -1,5 +1,5 @@
 /*
- * LD9 custom styles for Faustas Rinkevičius' CV website.
+ * LD9-LD10 custom styles for Faustas Rinkevičius' CV website.
  * Loaded after main.css to keep the existing dark blue visual identity.
  */
 
@@ -254,13 +254,29 @@ input[type="submit"]:active {
 }
 
 .section-title h2 {
+  position: relative;
+  display: inline-block;
   font-size: clamp(1.9rem, 3.4vw, 3rem);
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.035em;
 }
 
+.section-title h2::before {
+  position: absolute;
+  top: -0.55rem;
+  right: -1.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 2px solid #55b5e5;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(85 181 229 / 12%);
+  content: "";
+  animation: ld10-heading-spark 5s ease-in-out infinite;
+}
+
 .section-title h2::after {
+  position: relative;
   content: "";
   display: block;
   width: 3rem;
@@ -268,6 +284,7 @@ input[type="submit"]:active {
   margin: 0.9rem auto 0;
   border-radius: 999px;
   background: #1387c1;
+  animation: ld10-heading-underline 5s ease-in-out infinite;
 }
 
 .section-title p {
@@ -290,11 +307,49 @@ input[type="submit"]:active {
 }
 
 .about .intro-content {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(1.4rem, 3.5vw, 2.6rem);
   border: 1px solid rgb(231 242 247 / 10%);
   border-radius: 18px;
   background: #141f26;
   box-shadow: 0 14px 34px rgb(0 0 0 / 20%);
+}
+
+.about .intro-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about .intro-content::before,
+.about .intro-content::after {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.about .intro-content::before {
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  border: 3px solid rgb(85 181 229 / 42%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.65rem rgb(19 135 193 / 8%);
+  animation: ld10-about-circle 12s ease-in-out infinite;
+}
+
+.about .intro-content::after {
+  right: 2.2rem;
+  bottom: 1.25rem;
+  width: 0;
+  height: 0;
+  border-right: 1.25rem solid transparent;
+  border-bottom: 2.2rem solid rgb(85 181 229 / 28%);
+  border-left: 1.25rem solid transparent;
+  animation: ld10-about-triangle 7s ease-in-out infinite;
 }
 
 .about .intro-content .eyebrow {
@@ -445,6 +500,40 @@ input[type="submit"]:active {
   box-shadow: 0 12px 28px rgb(0 0 0 / 20%);
 }
 
+#services.services {
+  position: relative;
+  isolation: isolate;
+}
+
+#services.services::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(120deg, rgb(19 135 193 / 2%), rgb(19 135 193 / 15%), rgb(85 181 229 / 7%), rgb(19 135 193 / 2%));
+  background-size: 250% 250%;
+  content: "";
+  pointer-events: none;
+  animation: ld10-service-gradient 18s ease-in-out infinite;
+}
+
+#services.services > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.service-loading-indicator {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin: 1.25rem auto 0;
+  border: 3px solid rgb(85 181 229 / 22%);
+  border-top-color: #55b5e5;
+  border-right-color: #1387c1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgb(19 135 193 / 8%);
+  animation: ld10-service-spinner 1.1s linear infinite;
+}
+
 .service-detail-card h3,
 .media-card h3,
 .contact .info-box h3 {
@@ -579,6 +668,92 @@ input[type="submit"]:active {
 
 .footer .credits {
   color: #a9c1cc;
+}
+
+@keyframes ld10-heading-spark {
+  0% {
+    opacity: 0.45;
+    transform: rotate(0deg) scale(0.8);
+  }
+
+  30% {
+    opacity: 1;
+    transform: rotate(110deg) scale(1.1);
+  }
+
+  60% {
+    opacity: 0.65;
+    transform: rotate(230deg) scale(0.9);
+  }
+
+  100% {
+    opacity: 0.45;
+    transform: rotate(360deg) scale(0.8);
+  }
+}
+
+@keyframes ld10-heading-underline {
+  0%,
+  100% {
+    width: 2.5rem;
+    opacity: 0.7;
+    box-shadow: 0 0 0 rgb(85 181 229 / 0%);
+  }
+
+  35%,
+  70% {
+    width: 4rem;
+    opacity: 1;
+    box-shadow: 0 0 12px rgb(85 181 229 / 42%);
+  }
+}
+
+@keyframes ld10-service-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ld10-service-gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes ld10-about-circle {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  30% {
+    opacity: 0.8;
+    transform: translateY(0.45rem) rotate(90deg);
+  }
+
+  60% {
+    opacity: 0.6;
+    transform: translateY(-0.25rem) rotate(210deg);
+  }
+}
+
+@keyframes ld10-about-triangle {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0) rotate(0deg) scale(0.9);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateY(-0.5rem) rotate(35deg) scale(1.05);
+  }
 }
 
 @media (max-width: 767.98px) {
