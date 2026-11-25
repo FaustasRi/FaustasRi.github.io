@@ -1,6 +1,6 @@
 # Faustas Rinkevičius – CV svetainė
 
-Svetainė tęsiama pagal 7–8 laboratorinių darbų reikalavimus. Pagrindinis puslapis yra `index.html`.
+Svetainė tęsiama pagal 7–9 laboratorinių darbų reikalavimus. Pagrindinis puslapis yra `index.html`.
 
 ## Peržiūra kompiuteryje
 
@@ -17,6 +17,13 @@ Svetainė tęsiama pagal 7–8 laboratorinių darbų reikalavimus. Pagrindinis p
 - Pexels vaizdo ir Pixabay garso failai saugomi `assets/media` aplanke.
 
 Lentelėje nurodytos paslaugos ir kainos yra mokomieji pavyzdžiai, o ne realus kainoraštis.
+
+## LD9 stiliai
+
+- `assets/css/custom.css` po `main.css` prijungtas prie visų svetainės puslapių.
+- Atnaujinta tipografija, spalvų kontrastas, nuorodos, mygtukai, tarpų dydžiai ir turinio blokai.
+- Perdaryta navigacija ir „į viršų“ mygtukas; sąrašai atnaujinti pseudo-elementais bei skaitikliais.
+- Paslaugų lentelėje naudojamas išskirtinis antraštės stilius, zebra eilutės, užvedimo efektas ir vienodas centruotas langelių turinys.
 
 ## GitHub Pages
 
